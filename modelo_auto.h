@@ -8,7 +8,7 @@ class Modelo{
     public:
         // Constructor por omisión
         Modelo() {
-            marca = "Nissan"; "Chevrolet"; "Ford"; "Kia";
+            marca = ("Nissan, Chevrolet, Ford, Kia");
             anio = 2022;
         }
         // Constructor con parámetros

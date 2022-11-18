@@ -4,17 +4,30 @@ class Valor{
     private:
         float precio;
         float impuesto;
-        float valor_total;
     public:
-        Valor() {
-            precio = 700,000;
-            impuesto = 0.16 * precio;
-            valor_total = precio + impuesto;
+    //Constructor
+    Valor () {
+        precio = 500000;
+        impuesto = 0.03 * precio;
+    }
 
-     }
-        void imprimeDatos() {
-            cout << "Equipo" << precio << endl;
-            cout << "Año" << impuesto << endl;
-            cout << "Valor Total" << valor_total << endl;
-        }
+    Valor (float p) {
+        precio = p;
+    }
+
+    //Getters
+    float getPrecio() {
+        return precio;
+    }
+
+    //Setters
+    void setPrecio(float p) {
+        precio = p;
+    }
+
+    //Métodos comunes
+    float calculo_del_valor_total() {
+        return precio + impuesto;
+    }
+        
 };

@@ -26,4 +26,8 @@ compilar con:
       "a.exe"
       
 ## Correcciones
+Para la siguiente entrega cambie mis clases precio y modelo la cual agregue el hecho de que una persona pueda interactuar agregando valores para que se mas logico.
 
+Tambien cree una nueva clase de cotizacion que obtiene los valores de las clases precio y modelo, la cual junta los atributos para imprimir o juntar datos para cotizar un auto, tambien sirve como diagrama de clase porque genera variables que afectan a las dos clases antes mencionadas. 
+
+Por ultimo esta el diagrama de lucidchart que muestra como funciona la clase cotizacion para alterar las otras dos clases, precio y modelo.
