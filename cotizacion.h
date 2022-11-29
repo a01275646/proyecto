@@ -1,95 +1,69 @@
+#ifndef COTIZACION_H
+#define COTIZACION_H
+
+
 #include <string>
-
-#include "precio_auto.h"
-#include "modelo_auto.h"
-
+#include <vector>
+using namespace std;
 
 class Cotizacion{
     private:
-        Modelo marca;
-        Modelo anio;
-        Valor valor;
-        string nombre;
-    public:
-        bool pago_efectivo;
-        bool pago_credito;
-        bool pago_transaccion;
-        //Constructores
-        Cotizacion() {
-            pago_efectivo = false;
-            pago_credito = false;
-            pago_transaccion = true;
-            string = "firma";
-        }
+        string agencia;
+        string propietario;
+        int seguro;
+        vector<Vehiculo*> vehiculos;
 
-        Cotizacion(Modelo m, Modelo a, Valor v, string n, bool pe, bool pc, bool pt) {
-            marca = m;
-            anio = a;
-            valor = v;
-            nombre = n;
-            pago_efectivo = pe;
-            pago_credito = pc;
-            pago_transaccion = pt;
+    public:
+        //Constructores
+        Cotizacion(string agc, string prt, int sgr) {
+            agencia = agc;
+            propietario = prt;
+            int sgr;
         }
 
         //Getters
-        Modelo getMarca() {
-            return marca;
+        string getAgencia() {
+            return agencia;
         }
 
-        Modelo getAnio() {
-            return anio;
+        string getPropietario() {
+            return propietario;
         }
 
-        Valor getValor() {
-            return valor;
+        int getSeguro() {
+            return seguro;
         }
 
-        string getNombre () {
-            return nombre;
-        }
-
-        bool getPagoEfectivo () {
-            return pago_efectivo;
-        }
-
-        bool getPagoCredito () {
-            return pago_credito;
-        }
-
-        bool getPagoTransaccion () {
-            return pago_transaccion;
+        vector<Vehiculo*> getVehiculos() {
+            return vehiculos;
         }
 
         //Setters
-        void setCirculo(Modelo m) {
-            marca = m;
+        void setAgencia(string agc) {
+            agencia = agc;
         }
 
-        void setCirculo(Modelo a) {
-            anio = a;
+        void setPropietario(string prt) {
+            propietario = prt;
         }
 
-        void setCirculo(Valor v) {
-            valor = v;
-        }
-
-        void setNombre(string n){
-            nombre = n;
-        }
-
-        void setPagoEfectivo(bool pe){
-            pago_efectivo = pe;
-        }
-
-        void setPagoCredito(bool pc){
-            pago_credito = pc;
-        }
-
-        void setPagoTransaccion(bool pt){
-            pago_transaccion = pt;
+        void setSeguro(int sgr) {
+            seguro = sgr;
         }
 
         //Metodos comunes
-        
+        void agregarIntegrante(Vehiculo* vehiculo) {
+            vehiculos.push_back(vehiculo);
+        }
+
+        void mostrarIntegrantes() {
+
+            for(int i = 0; i < vehiculos.size(); i++) {
+                vehiculos[i]->imprimeDatos();
+                cout << endl;
+            }
+
+        }
 };
+
+#endif
