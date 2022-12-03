@@ -34,3 +34,4 @@ Por ultimo esta el diagrama de lucidchart que muestra como funciona la clase cot
 
 Para este tercer avance cambie totalmente mi modelo y cambie las clases marca, modelo y precio por auto, pickup y vehículos. Mientras la clase cotización la convertí en un estado de agregación y la clase madre es Vehículos. Cambie completamente el orden e implemente nuevos atributos y métodos. 
 
+Para el avance final me enfoque en crear el main el cual la composición fue la clase cotización la cual guardaba listas de autos que llegan a ser cotizados.

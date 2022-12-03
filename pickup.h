@@ -7,17 +7,17 @@
 #include "vehiculo.h"
 using namespace std;
 
-class PickUp{
+class PickUp : public Vehiculo{
 
     private:
         string estilop;
         int cabinas;
-        float carga;
+        float carga; //Peso en toneladas
         float impuesto = 0;
 
     public:
 
-        PickUp(string estp, int cab, float carg) {
+        PickUp(string estp, int cab, float carg, string mrc, int an, string mdl, string clr, int prc) : Vehiculo(mrc, an, mdl, clr, prc) {
             estilop = estp;
             cabinas = cab;
             carga = carg;

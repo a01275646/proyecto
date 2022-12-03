@@ -18,7 +18,7 @@ class Cotizacion{
         Cotizacion(string agc, string prt, int sgr) {
             agencia = agc;
             propietario = prt;
-            int sgr;
+            seguro = sgr;
         }
 
         //Getters
@@ -63,6 +63,12 @@ class Cotizacion{
                 cout << endl;
             }
 
+        }
+
+        void imprimeDatos() {
+            cout << "Nombre de la agencia: " << agencia << endl;
+            cout << "Nombre de Propietario: " << propietario << endl;
+            cout << "Seguro: " << seguro << endl;
         }
 };
 
