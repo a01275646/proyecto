@@ -54,7 +54,9 @@ class Auto : public Vehiculo {
             impuesto = imp;
         }
 
-        float valor_total = (impuesto * precio) + precio;
+        float valor_total() {
+             return ((impuesto * precio) + precio);
+        }
 
         void ImprimeDatos(){
             cout << "Estilo de auto: " << estilo << endl;
